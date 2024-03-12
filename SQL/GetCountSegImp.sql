@@ -1,0 +1,5 @@
+﻿SELECT 
+	LPAD(COUNT(1)+1, 4, '0') AS "Code" 
+FROM "@MGS_CL_SEGIMP"
+WHERE 
+	"U_MGS_CL_TIPENV" = '{0}' 

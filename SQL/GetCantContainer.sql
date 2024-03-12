@@ -1,0 +1,7 @@
+﻿SELECT 
+	COUNT(1) AS "Cant"
+FROM /*"@MGS_CL_SEGCNT"*/ "@MGS_CL_SEGIMP"
+WHERE 
+	"Code" = '{0}' 
+	/*AND "U_MGS_CL_CNTASG" > 0*/
+	AND IFNULL(CAST("U_MGS_CL_CONTAI" AS VARCHAR(5000)),'') <> ''

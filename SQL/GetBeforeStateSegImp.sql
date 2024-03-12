@@ -1,0 +1,4 @@
+﻿SELECT 
+	"U_MGS_CL_STATUS" AS "Status"
+FROM "@MGS_CL_SEGIMP"
+WHERE "Code" = '{0}'

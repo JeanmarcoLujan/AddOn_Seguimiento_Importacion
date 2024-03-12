@@ -1,0 +1,6 @@
+﻿SELECT 
+	COUNT(1) AS "Cant"
+FROM "@MGS_CL_CONTEN" 
+WHERE 
+	"Code" = '{0}' 
+	AND "U_MGS_CL_CARSUE" = 'Y'

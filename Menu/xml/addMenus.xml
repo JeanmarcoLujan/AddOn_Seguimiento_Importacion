@@ -1,0 +1,7 @@
+﻿<Application>
+	<Menus>
+		<action type="add">
+			<Menu Checked="0" Enabled="1" FatherUID="2304" Image="" String="Seguimiento de Importacion" Type="1" UniqueID="MGS_SEGIMP" />
+		</action>
+	</Menus>
+</Application>
