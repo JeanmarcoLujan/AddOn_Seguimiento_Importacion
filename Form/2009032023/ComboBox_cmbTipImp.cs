@@ -20,7 +20,7 @@ namespace sapping.Form._2009032023
             var tipImp = Form.DataSources.DBDataSources.Item(0).GetValue("U_MGS_CL_TIPIMP", 0);
             var parc = "P1";
             var currYear = DateTime.Now.ToString("yyyy");
-            var queryCode = string.Format(GetEmbeddedResource("sapping.SQL.GetCountSegImp.sql"), tipEnv);
+            var queryCode = string.Format(GetEmbeddedResource("sapping.SQL.GetCountSegImp.sql"), tipEnv, tipImp);
             var record = (SAPbobsCOM.Recordset)B1Connections.DiCompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset);
             record.DoQuery(queryCode);
 
