@@ -1,5 +1,8 @@
-﻿SELECT 
-	LPAD(COUNT(1)+1, 4, '0') AS "Code" 
+﻿SELECT TOP 1 "Code" FROM (
+	SELECT 
+	 ROW_NUMBER() OVER (ORDER BY "Code") AS "RowNum",
+	 LPAD(RIGHT(SUBSTRING("Code",(INSTR("Code", '-', 1, 2) +1),6),4)+1,4,'0') AS "Code" 
 FROM "@MGS_CL_SEGIMP"
 WHERE 
 	"U_MGS_CL_TIPENV" = '{0}'  AND "U_MGS_CL_TIPIMP" = '{1}' 
+) AA ORDER BY "RowNum" DESC
