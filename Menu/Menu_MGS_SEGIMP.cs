@@ -40,6 +40,7 @@ namespace sapping.Menu
             //Form.SetCflConditions("C_Pue1", "Code", BoConditionOperation.co_EQUAL, "01");
             //Form.Items.Item("cmbParcial").Specific.Value = "asd";
             Form.DataSources.DBDataSources.Item(0).SetValue("U_MGS_CL_ESPARC", 0, "N");
+            Form.Items.Item("Item_41").Height =  20;
 
             Form.Visible = true;
         }
